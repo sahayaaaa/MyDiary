@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Profile | MYDIARY</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Space Background -->
+    <div class="space-bg">
+        <div class="stars"></div>
+        <div class="stars stars-two"></div>
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+    </div>
+
+
+    <!-- PROFILE SETUP -->
+
+    <main class="profile-setup-page">
+
+        <div class="profile-setup-card">
+
+            <div class="setup-icon">
+                ✦
+            </div>
+
+            <h1>Create Your Profile</h1>
+
+            <p class="setup-subtitle">
+                Make your MYDIARY universe yours 🌌
+            </p>
+
+
+            <!-- NAME -->
+
+            <div class="input-group">
+
+                <label for="name">
+                    Your Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                >
+
+            </div>
+
+
+            <!-- BIO -->
+
+            <div class="input-group">
+
+                <label for="bio">
+                    Bio
+                </label>
+
+                <textarea
+                    id="bio"
+                    placeholder="Tell us a little about yourself..."
+                ></textarea>
+
+            </div>
+
+
+            <!-- INTERESTS -->
+
+            <div class="input-group">
+
+                <label for="interests">
+                    Interests
+                </label>
+
+                <input
+                    type="text"
+                    id="interests"
+                    placeholder="Example: Music, Coding, Travel"
+                >
+
+            </div>
+
+
+            <!-- SAVE -->
+
+            <button
+                class="primary-btn"
+                onclick="saveProfile()"
+            >
+                Save & Enter MYDIARY →
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <script type="module" src="script.js"></script>
+
+</body>
+
+</html>

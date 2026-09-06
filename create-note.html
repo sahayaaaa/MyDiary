@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Note | MYDIARY</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Space Background -->
+    <div class="space-bg">
+        <div class="stars"></div>
+        <div class="stars stars-two"></div>
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+    </div>
+
+
+    <main class="create-page">
+
+        <!-- Back Button -->
+
+        <button
+            class="back-btn"
+            onclick="window.location.href='home.html'"
+        >
+            ← Back
+        </button>
+
+
+        <!-- Note Form -->
+
+        <div class="create-page-card">
+
+            <div class="create-page-icon">
+                📝
+            </div>
+
+            <h1>Create Note</h1>
+
+            <p>
+                Write down anything you don't want to forget.
+            </p>
+
+
+            <div class="input-group">
+
+                <label>Title</label>
+
+                <input
+                    type="text"
+                    id="noteTitle"
+                    placeholder="Give your note a title..."
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>Your Note</label>
+
+                <textarea
+                    id="noteContent"
+                    class="note-writing-area"
+                    placeholder="Start writing..."
+                ></textarea>
+
+            </div>
+
+
+            <button
+                class="primary-btn"
+                onclick="saveNote()"
+            >
+                Save Note 💙
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <script type="module" src="script.js"></script>
+
+</body>
+
+</html>

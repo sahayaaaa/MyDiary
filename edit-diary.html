@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Diary | MYDIARY</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Space Background -->
+    <div class="space-bg">
+        <div class="stars"></div>
+        <div class="stars stars-two"></div>
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+    </div>
+
+
+    <main class="create-page">
+
+        <button
+            class="back-btn"
+            onclick="window.location.href='diary.html'"
+        >
+            ← Back
+        </button>
+
+
+        <div class="diary-book">
+
+            <div class="diary-header">
+
+                <div class="diary-icon">✏️📔</div>
+
+                <h1>Edit Diary Entry</h1>
+
+                <p>
+                    Update your memory whenever you want.
+                </p>
+
+            </div>
+
+
+            <!-- Date -->
+
+            <div class="diary-date">
+
+                <label for="editDiaryDate">
+                    📅 Entry Date
+                </label>
+
+                <input
+                    type="date"
+                    id="editDiaryDate"
+                >
+
+            </div>
+
+
+            <!-- Notebook -->
+
+            <div class="diary-page">
+
+                <input
+                    type="text"
+                    id="editDiaryTitle"
+                    class="diary-title"
+                    placeholder="Dear Diary..."
+                >
+
+
+                <textarea
+                    id="editDiaryContent"
+                    class="diary-writing-area"
+                    placeholder="Today was..."
+                ></textarea>
+
+            </div>
+
+
+            <button
+                class="primary-btn"
+                onclick="saveEditedDiary()"
+            >
+                Save Changes 💙
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <script
+        type="module"
+        src="script.js"
+    ></script>
+
+</body>
+
+</html>

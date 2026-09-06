@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Diary | MYDIARY</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Space Background -->
+    <div class="space-bg">
+        <div class="stars"></div>
+        <div class="stars stars-two"></div>
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+    </div>
+
+
+    <main class="create-page">
+
+        <!-- Back Button -->
+        <button
+            class="back-btn"
+            onclick="window.location.href='home.html'"
+        >
+            ← Back
+        </button>
+
+
+        <!-- Header -->
+        <div class="saved-page-header">
+
+            <div class="create-page-icon">
+                📔
+            </div>
+
+            <div>
+                <h1>Your Diary</h1>
+
+                <p>
+                    Your memories, thoughts and special moments.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- Diary Entries -->
+        <div
+            id="allDiaryContainer"
+            class="diary-entries-container"
+        >
+
+            <p class="loading-text">
+                Opening your diary...
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <script
+        type="module"
+        src="script.js"
+    ></script>
+
+</body>
+
+</html>

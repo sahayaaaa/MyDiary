@@ -1,0 +1,118 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MYDIARY | Your Thoughts, Your Universe</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Space Background -->
+    <div class="space-bg">
+        <div class="stars"></div>
+        <div class="stars stars-two"></div>
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+    </div>
+
+
+    <!-- LOGIN PAGE -->
+    <main class="login-page">
+
+        <!-- Logo Section -->
+        <section class="brand">
+
+            <div class="logo-icon">✦</div>
+
+            <h1>MY<span>DIARY</span></h1>
+
+            <p>Your thoughts. Your universe.</p>
+
+        </section>
+
+
+        <!-- Login Card -->
+        <section class="login-card">
+
+            <h2>Welcome Back</h2>
+
+            <p class="login-subtitle">
+                Enter your universe ✨
+            </p>
+
+
+            <!-- Email -->
+            <div class="input-group">
+
+                <label for="email">Email</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                >
+
+            </div>
+
+
+            <!-- Password -->
+            <div class="input-group">
+
+                <label for="password">Password</label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                >
+
+            </div>
+
+
+            <!-- Login Button -->
+            <button class="primary-btn" onclick="login()">
+                Enter MYDIARY →
+            </button>
+
+
+            <!-- Divider -->
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+
+            <!-- Google Login -->
+            <button class="google-btn" onclick="googleLogin()">
+                <span class="google-icon">G</span>
+                Continue with Google
+            </button>
+
+
+            <!-- Signup -->
+            <p class="signup-text">
+
+                New to MYDIARY?
+
+                <a href="#" onclick="showSignup()">
+                    Create your universe
+                </a>
+
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+   <script type="module" src="script.js"></script>
+
+</body>
+</html>
+```

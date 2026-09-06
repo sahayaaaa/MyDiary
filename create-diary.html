@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Diary | MYDIARY</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Space Background -->
+    <div class="space-bg">
+        <div class="stars"></div>
+        <div class="stars stars-two"></div>
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+    </div>
+
+
+    <main class="create-page">
+
+        <!-- Back Button -->
+
+        <button
+            class="back-btn"
+            onclick="window.location.href='home.html'"
+        >
+            ← Back
+        </button>
+
+
+        <!-- Diary -->
+
+        <div class="diary-book">
+
+            <div class="diary-header">
+
+                <div>
+                    <div class="diary-icon">📔</div>
+
+                    <h1>My Diary</h1>
+
+                    <p>Write your thoughts and memories.</p>
+                </div>
+
+            </div>
+
+
+            <!-- Date -->
+
+            <div class="diary-date">
+
+                <label for="diaryDate">
+                    📅 Entry Date
+                </label>
+
+                <input
+                    type="date"
+                    id="diaryDate"
+                >
+
+            </div>
+
+
+            <!-- Notebook Page -->
+
+            <div class="diary-page">
+
+                <input
+                    type="text"
+                    id="diaryTitle"
+                    class="diary-title"
+                    placeholder="Dear Diary..."
+                >
+
+
+                <textarea
+                    id="diaryContent"
+                    class="diary-writing-area"
+                    placeholder="Today was..."
+                ></textarea>
+
+            </div>
+
+
+            <!-- Save -->
+
+            <button
+                class="primary-btn"
+                onclick="saveDiary()"
+            >
+                💙 Save Entry
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <script
+        type="module"
+        src="script.js"
+    ></script>
+
+
+    <!-- Set today's date -->
+
+    <script>
+
+        document.getElementById("diaryDate").value =
+            new Date()
+                .toISOString()
+                .split("T")[0];
+
+    </script>
+
+</body>
+
+</html>

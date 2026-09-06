@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MYDIARY | Home</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Space Background -->
+    <div class="space-bg">
+        <div class="stars"></div>
+        <div class="stars stars-two"></div>
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+    </div>
+
+
+    <!-- MAIN APP -->
+
+    <div class="app-page">
+
+        <!-- TOP HEADER -->
+
+        <header class="app-header">
+
+            <div>
+                <h1>MY<span>DIARY</span></h1>
+                <p>Your personal universe 🌌</p>
+            </div>
+
+            <div class="profile-mini">
+                👤
+            </div>
+
+        </header>
+
+
+        <!-- HOME CONTENT -->
+
+        <main class="main-content">
+
+            <section id="homeSection" class="page-section active">
+
+                <h2>Welcome back 👋</h2>
+
+                <p class="section-subtitle">
+                    Everything you've created lives here.
+                </p>
+
+
+                <!-- Empty state for now -->
+<!-- SAVED NOTES -->
+
+<div id="notesContainer" class="notes-container">
+
+    <!-- MYDIARY DASHBOARD -->
+
+<div class="dashboard-container">
+
+    <!-- NOTES -->
+
+    <div
+        class="dashboard-card"
+        onclick="window.location.href='notes.html'"
+    >
+
+        <div class="dashboard-icon">📝</div>
+
+        <div class="dashboard-info">
+
+            <h3>Your Notes</h3>
+
+            <p>
+                All your saved notes
+            </p>
+
+        </div>
+
+        <div class="dashboard-arrow">
+            →
+        </div>
+
+    </div>
+
+
+    <!-- DIARY -->
+
+    <div class="dashboard-card"
+    onclick="window.location.href='diary.html'"
+>
+
+        <div class="dashboard-icon">📔</div>
+
+        <div class="dashboard-info">
+
+            <h3>Your Diary</h3>
+
+            <p>
+                Your personal memories
+            </p>
+
+        </div>
+
+        <div class="dashboard-arrow">
+            →
+        </div>
+
+    </div>
+
+
+    <!-- REMINDERS -->
+
+    <div class="dashboard-card">
+
+        <div class="dashboard-icon">⏰</div>
+
+        <div class="dashboard-info">
+
+            <h3>Your Reminders</h3>
+
+            <p>
+                Never forget what's important
+            </p>
+
+        </div>
+
+        <div class="dashboard-arrow">
+            →
+        </div>
+
+    </div>
+
+
+    <!-- PLANS -->
+
+    <div class="dashboard-card">
+
+        <div class="dashboard-icon">📅</div>
+
+        <div class="dashboard-info">
+
+            <h3>Your Plans</h3>
+
+            <p>
+                Organize your future
+            </p>
+
+        </div>
+
+        <div class="dashboard-arrow">
+            →
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+                
+
+            </section>
+
+
+            <!-- FAVORITES -->
+
+            <section id="favoritesSection" class="page-section">
+
+                <h2>❤️ Favorites</h2>
+
+                <p class="section-subtitle">
+                    Your most important memories and ideas.
+                </p>
+
+                <div class="empty-state">
+
+                    <div class="empty-icon">💙</div>
+
+                    <h3>No favorites yet</h3>
+
+                    <p>
+                        Your favorite notes will appear here.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- CREATE -->
+
+            <section id="createSection" class="page-section">
+
+                <h2>Create ✨</h2>
+
+                <p class="section-subtitle">
+                    What would you like to create?
+                </p>
+
+
+                <div class="create-grid">
+
+                    <div
+    class="create-card"
+    onclick="window.location.href='create-note.html'"
+>
+    <div>📝</div>
+    <h3>Note</h3>
+    <p>Write something important</p>
+</div>
+
+                    <div
+    class="create-card"
+    onclick="window.location.href='create-diary.html'"
+>
+    <div>📔</div>
+    <h3>Diary</h3>
+    <p>Write your memories</p>
+</div>
+
+                    <div class="create-card">
+                        <div>⏰</div>
+                        <h3>Reminder</h3>
+                        <p>Never forget anything</p>
+                    </div>
+
+                    <div class="create-card">
+                        <div>📅</div>
+                        <h3>Plan</h3>
+                        <p>Plan your next adventure</p>
+                    </div>
+
+                </div>
+                <!-- NOTE FORM -->
+
+<div id="noteForm" class="note-form">
+
+    <h3>📝 Create a Note</h3>
+
+    <div class="input-group">
+
+        <label>Title</label>
+
+        <input
+            type="text"
+            id="noteTitle"
+            placeholder="Give your note a title..."
+        >
+
+    </div>
+
+
+    <div class="input-group">
+
+        <label>Your Note</label>
+
+        <textarea
+            id="noteContent"
+            placeholder="Start writing..."
+        ></textarea>
+
+    </div>
+
+
+    <button
+        class="primary-btn"
+        onclick="saveNote()"
+    >
+        Save Note 💙
+    </button>
+
+
+    <button
+        class="cancel-btn"
+        onclick="closeNoteForm()"
+    >
+        Cancel
+    </button>
+
+</div>
+
+            </section>
+
+
+            <!-- PROFILE -->
+
+            <section id="profileSection" class="page-section">
+
+                <div class="profile-page">
+
+                    <div class="profile-avatar">
+                        👤
+                    </div>
+
+                    <h2 id="profileName">MYDIARY User</h2>
+
+                    <p id="profileEmail">
+                        Loading...
+                    </p>
+                    <button
+    class="edit-profile-btn"
+    onclick="editProfile()"
+>
+    ✏️ Edit Profile
+</button>
+
+
+                    <div class="profile-info">
+
+                        <div class="profile-card">
+    <span>📝</span>
+    <div>
+        <strong>Bio</strong>
+        <p id="profileBio">Loading...</p>
+    </div>
+</div>
+
+                 <div class="profile-card">
+    <span>💙</span>
+    <div>
+        <strong>Interests</strong>
+        <p id="profileInterests">Loading...</p>
+    </div>
+</div>       
+<div id="editProfileForm" class="edit-profile-form">
+
+    <div class="input-group">
+        <label>Your Name</label>
+
+        <input
+            type="text"
+            id="editName"
+            placeholder="Enter your name"
+        >
+    </div>
+
+
+    <div class="input-group">
+        <label>Bio</label>
+
+        <textarea
+            id="editBio"
+            placeholder="Tell us about yourself..."
+        ></textarea>
+    </div>
+
+
+    <div class="input-group">
+        <label>Interests</label>
+
+        <input
+            type="text"
+            id="editInterests"
+            placeholder="Coding, Music, Travel..."
+        >
+    </div>
+
+
+    <button
+        class="primary-btn"
+        onclick="updateProfile()"
+    >
+        Save Changes 💙
+    </button>
+
+
+    <button
+        class="cancel-btn"
+        onclick="cancelEditProfile()"
+    >
+        Cancel
+    </button>
+
+</div>
+                    </div>
+
+
+                    <!-- Activity -->
+
+                    <h3 class="activity-title">
+                        Your Activity
+                    </h3>
+
+                    <div class="activity-grid">
+
+    <div>
+        <strong id="notesCount">0</strong>
+        <span>Notes</span>
+    </div>
+
+    <div>
+        <strong id="diariesCount">0</strong>
+        <span>Diaries</span>
+    </div>
+
+    <div>
+        <strong id="favoritesCount">0</strong>
+        <span>Favorites</span>
+    </div>
+
+    <div>
+        <strong id="plansCount">0</strong>
+        <span>Plans</span>
+    </div>
+
+</div>
+
+
+                    <button
+                        class="logout-btn"
+                        onclick="logout()"
+                    >
+                        Logout
+                    </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- BOTTOM NAVIGATION -->
+
+        <nav class="bottom-nav">
+
+            <button
+                class="nav-btn active"
+                onclick="showSection('home')"
+            >
+                <span>🏠</span>
+                <small>Home</small>
+            </button>
+
+
+            <button
+                class="nav-btn"
+                onclick="showSection('favorites')"
+            >
+                <span>❤️</span>
+                <small>Favorites</small>
+            </button>
+
+
+            <!-- CREATE BUTTON -->
+<button
+    class="nav-btn create-nav-btn"
+    onclick="showSection('create')"
+>
+    <span>✍️</span>
+    <small>Create</small>
+</button>
+
+
+            <button
+                class="nav-btn"
+                onclick="showSection('profile')"
+            >
+                <span>👤</span>
+                <small>Profile</small>
+            </button>
+
+        </nav>
+
+    </div>
+
+
+    <script type="module" src="script.js"></script>
+
+</body>
+
+</html>
